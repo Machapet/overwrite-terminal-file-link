@@ -1,0 +1,46 @@
+{
+  "name": "overwrite-terminal-file-link",
+  "displayName": "Overwrite Terminal File Link",
+  "description": "Linkify files in the terminal.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Machapet/overwrite-terminal-file-link"
+  },
+  "author": {
+    "name": "Petr Machacek",
+    "email": "petr.machacek@gmail.com",
+    "url:": "https://github.com/Machapet"
+  },
+  "publisher": "Machapet",  
+  "license": "MIT",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+		"onStartupFinished"
+	],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}
